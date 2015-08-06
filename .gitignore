@@ -1,0 +1,5 @@
+*.swp
+
+.jrubyfx_cache
+*.jar
+

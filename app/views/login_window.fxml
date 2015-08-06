@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="500.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="authorize_url" editable="false" />
+      <TextField fx:id="oauth_varifier" promptText="Please input PIN" />
+      <HBox alignment="TOP_RIGHT" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" fx:id="authorize" onAction="#authorize" text="login" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" fx:id="pao" onAction="#pao" text="Select log zip file to delete" disable="true" />
+      <Label fx:id="file_path" text="" textAlignment="LEFT" />
+   </children>
+</VBox>
