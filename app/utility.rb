@@ -3,18 +3,17 @@ require 'oauth'
 require 'json'
 
 class Utility
-  PRODUCT_NAME = 'goldenBigPao'
+  PRODUCT_NAME = 'goldenbigpao'
 
   def self.config_dir
-    camel_product_name = PRODUCT_NAME.gsub(/^./, &:upcase)
     case RbConfig::CONFIG['host_os']
     when /darwin/i
-      File.expand_path("~/Library/#{camel_product_name}")
+      File.expand_path("~/Library/#{PRODUCT_NAME}")
     when /mswin|mingw|cygwin/i
       # http://windows.microsoft.com/en-us/windows-8/what-appdata-folder
-      "#{ENV['APPDATA']}/#{camel_product_name}"
+      "#{ENV['APPDATA']}/#{PRODUCT_NAME}"
     when /linux/i
-      File.expand_path("~/.#{camel_product_name}")
+      File.expand_path("~/.#{PRODUCT_NAME}")
     end
   end
 
